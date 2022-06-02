@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Satisfy&display=swap');
+
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(219, 214, 213);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.card {
+  width: 50%;
+  margin: 100px auto;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.input,
+.insert {
+  border: none;
+  outline: none;
+  padding: 5px 15px;
+  color: black;
+  font-family: 'Satisfy', cursive;
+  font-size: 22px;
+  width: 90%;
+}
+
+.fa-solid,
+.fa {
+  font-size: 22px;
+  font-style: normal;
+}
+
+h5 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.text1 {
+  display: flex;
+  row-gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.text1 p {
+  margin-top: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  width: 80%;
+}
+
+.fa-square-o {
+  padding: 0 10px;
+}
+
+.fa-check-square {
+  color: blue;
+  padding: 0 10px;
+}
+
+.fa-check-circle {
+  color: green;
+  margin-top: 13px;
+}
+
+.fa-trash {
+  color: red;
+  cursor: pointer;
+}
+
+.footer h5 {
+  transition: all 500ms linear;
+}
+
+.footer h5:hover {
+  font-weight: bold;
+}
+
+.fa-arrow-left {
+  font-size: 15px;
+  font-style: normal;
+  color: rgb(32, 30, 30);
+}
+
+.icon-check {
+  margin-left: -33px;
+}
+
+.icon-check:hover {
+  background-color: rgb(240, 227, 227);
+}
+
+.fa-ellipsis-vertical,
+.fa-trash {
+  margin-top: 15px;
+}
+
+.text {
+  outline: none;
+}
