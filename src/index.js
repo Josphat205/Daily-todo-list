@@ -59,7 +59,7 @@ document.addEventListener('keyup', (e) => {
         LIST.push({
           name: todo,
           completed: false,
-          id: 1,
+          id: LIST.length + 1,
         });
       }
       id += 1;
@@ -77,8 +77,11 @@ const completeTodo = (element) => {
   element.classList.toggle(checked);
   element.classList.toggle(unchecked);
   element.parentNode.querySelector('.text').classList.toggle(lineThrough);
-
-  LIST[element.id].completed = !LIST[element.id].completed;
+  if (element.classList.contains('fa-check-square')) {
+    LIST[element.id - 1].completed = true;
+  } else if (element.classList.contains('fa-square-o')) {
+    LIST[element.id - 1].completed = false;
+  }
 };
 
 list.addEventListener('input', (e) => {
@@ -102,9 +105,8 @@ list.addEventListener('click', (e) => {
   }
   if (element.classList.contains('complete')) {
     completeTodo(element);
-  } else if (element.classList.contains('fa-trash')) {
-    // removeTodo();
   }
+
   // update list in localstorage
   localStorage.setItem('TODO', JSON.stringify(LIST));
 });
@@ -113,7 +115,6 @@ list.addEventListener('click', (e) => {
 
 // function to loadlist
 const loadList = (array) => {
-  // array.sort((a, b) => b.id - a.id);
   array.forEach((item) => {
     TodoList.addToDoList(item.name, item.completed, item.id);
   });
@@ -130,3 +131,22 @@ if (data) {
 }
 
 removeTodo();
+
+document.querySelector('.fa-arrows-rotate').addEventListener('click', () => {
+  window.location.reload();
+});
+
+const clearChecked = () => {
+  const clearBtn = document.querySelector('.clear-all');
+  clearBtn.addEventListener('click', () => {
+    LIST = LIST.filter((todo) => todo.completed !== true);
+    LIST = LIST.map((todo, index) => {
+      todo.id = index + 1;
+      return todo;
+    });
+    localStorage.setItem('TODO', JSON.stringify(LIST));
+    window.location.reload();
+  });
+};
+
+clearChecked();
