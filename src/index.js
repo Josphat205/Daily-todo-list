@@ -82,8 +82,7 @@ const completeTodo = (element) => {
   } else if (element.classList.contains('fa-square-o')) {
     LIST[element.id - 1].completed = false;
   }
-  // const li = LIST[element.id].completed = LIST[element.id].completed+1 ? false : true;
-  // console.log(li)
+
 };
 
 list.addEventListener('input', (e) => {
@@ -117,7 +116,6 @@ list.addEventListener('click', (e) => {
 
 // function to loadlist
 const loadList = (array) => {
-  // array.sort((a, b) => b.id - a.id);
   array.forEach((item) => {
     TodoList.addToDoList(item.name, item.completed, item.id);
   });
