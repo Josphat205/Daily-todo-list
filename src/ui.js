@@ -10,11 +10,10 @@ const removeTodo = () => {
         todo.id = index + 1;
         return todo;
       });
-      //  LIST.splice(LIST.findIndex(a => a.id === parseInt(tagId)) , 1);
       localStorage.setItem('TODO', JSON.stringify(LIST));
-      // document.getElementById(tagId).remove();
       window.location.reload();
     }
   });
 };
+
 export default removeTodo;
