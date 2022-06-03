@@ -82,7 +82,6 @@ const completeTodo = (element) => {
   } else if (element.classList.contains('fa-square-o')) {
     LIST[element.id - 1].completed = false;
   }
-
 };
 
 list.addEventListener('input', (e) => {
