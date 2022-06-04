@@ -1,6 +1,7 @@
 import 'lodash';
 import './style.css';
 import removeTodo from './ui.js';
+import Swal from 'sweetalert2/src/sweetalert2.js';
 
 // list class
 
@@ -146,6 +147,11 @@ const clearChecked = () => {
     });
     localStorage.setItem('TODO', JSON.stringify(LIST));
     window.location.reload();
+    Swal.fire(
+      'Good job!',
+      'Items Deleted Successfully!',
+      'success'
+    )
   });
 };
 
