@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Josphat205/webpack-setup/issues"
   },
-  "homepage": "https://github.com/Josphat205/webpack-setup#readme",
+  "homepage": " https://josphat205.github.io/Daily-to-list/",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "express": "^4.18.1",
