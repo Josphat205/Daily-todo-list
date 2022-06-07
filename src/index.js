@@ -1,4 +1,3 @@
-
 import './style.css';
 import removeTodo from './ui.js';
 
