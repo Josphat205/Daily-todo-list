@@ -6,23 +6,6 @@ module.exports = {
   entry: {
     bundle: './src/index.js',
   },
-  devServer: {
-    static: './dist',
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/template.html',
-    }),
-  ],
-  output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-    publicPath: '/',
-  },
-  // optimization: {
-  //   runtimeChunk: 'single',
-  // },
   module: {
     rules: [
       {
@@ -30,5 +13,21 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
     ],
+  },
+  devServer: {
+    static: './dist',
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
 };
