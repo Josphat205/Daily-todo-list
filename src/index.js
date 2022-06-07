@@ -1,7 +1,6 @@
-import 'lodash';
+
 import './style.css';
 import removeTodo from './ui.js';
-import Swal from 'sweetalert2/src/sweetalert2.js';
 
 // list class
 
@@ -21,7 +20,7 @@ class TodoList {
     const item = `
     <li class=" icon-check card-header d-flex justify-content-between" id="${id}">
         <div class="text1">
-          <i class="complete fa ${done} " id="${id}" aria-hidden="true"></i>
+          <i class="complete fa ${done}" id="${id}" aria-hidden="true"></i>
           <p class="text ${line}" ${
   !todo.completed ? 'contenteditable' : ''
 }>${todo}</p>
@@ -147,11 +146,6 @@ const clearChecked = () => {
     });
     localStorage.setItem('TODO', JSON.stringify(LIST));
     window.location.reload();
-    Swal.fire(
-      'Good job!',
-      'Items Deleted Successfully!',
-      'success'
-    )
   });
 };
 
