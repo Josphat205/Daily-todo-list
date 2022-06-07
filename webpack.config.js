@@ -2,9 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
-    bundle: path.resolve(__dirname, './src/index.js'),
+    bundle: './src/index.js',
   },
   devServer: {
     static: './dist',
@@ -20,9 +20,9 @@ module.exports = {
     clean: true,
     publicPath: '/',
   },
-  optimization: {
-    runtimeChunk: 'single',
-  },
+  // optimization: {
+  //   runtimeChunk: 'single',
+  // },
   module: {
     rules: [
       {

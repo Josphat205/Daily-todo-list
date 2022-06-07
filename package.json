@@ -7,7 +7,8 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
-    "build": "webpack --mode production"
+    "build": "webpack",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,6 @@
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
-    "js-loader": "^0.0.2",
-    "lodash": "^4.17.21"
+    "js-loader": "^0.0.2"
   }
 }
