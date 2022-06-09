@@ -65,4 +65,23 @@ describe('add and delete', () => {
     // assert
     expect(result).toEqual(true);
   });
+
+  // checking editing
+  test('test Updated', () => {
+    // arrange
+    const id = 3;
+    const arr = [
+      { name: 'josphat', completed: false, id: 1 },
+      { name: 'josphat1', completed: false, id: 2 },
+      { name: 'josphat2', completed: true, id: 3 },
+      { name: 'josphat3', completed: true, id: 4 },
+    ];
+    const el = 'contenteditable';
+
+    // act
+    const result = updateTodo(arr, id, el);
+    // assert
+    expect(result).toBe('updated');
+  });
+
 });

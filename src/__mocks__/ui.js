@@ -26,4 +26,15 @@ export const completeTodo = (arr, element) => {
   return 'incomplete';
 };
 
+// Editing
+export const updateTodo = (arr, id, el) => {
+  const array = arr.find((todo) => todo.id === parseInt(id, 10));
+  if (el === 'contenteditable') {
+    const res = 'updated';
+    return res;
+  }
+  return array;
+};
+
+
 
