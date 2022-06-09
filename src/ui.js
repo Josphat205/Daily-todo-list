@@ -2,7 +2,7 @@ export const checked = 'fa-check-square';
 export const unchecked = 'fa-square-o';
 export const lineThrough = 'text-decoration-line-through';
 export const list = document.querySelector('#list-items');
-export let LIST = JSON.parse(localStorage.getItem('TODO')) || [];
+let LIST = JSON.parse(localStorage.getItem('TODO')) || [];
 // remove todo
 export const removeTodo = () => {
   list.addEventListener('click', (e) => {
@@ -35,16 +35,16 @@ export const addToDoList = (todo, completed, id) => {
   const position = 'beforeend';
 
   list.insertAdjacentHTML(position, item);
-}
+};
 
-//load items from localhost to ui
+// load items from localhost to ui
 export const loadList = (array) => {
   array.forEach((item) => {
     addToDoList(item.name, item.completed, item.id);
   });
   localStorage.setItem('TODO', JSON.stringify(LIST));
 };
-//clear checked function
+// clear checked function
 export const clearChecked = () => {
   const clearBtn = document.querySelector('.clear-all');
   clearBtn.addEventListener('click', () => {

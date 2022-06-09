@@ -1,6 +1,14 @@
 import './style.css';
-import { completeTodo,clearChecked,addToDoList, list, LIST, checked, unchecked, lineThrough, loadList,removeTodo } from './ui.js';
+import {
+  completeTodo,
+  clearChecked,
+  addToDoList,
+  list,
+  loadList,
+  removeTodo,
+} from './ui.js';
 // variables
+let LIST = JSON.parse(localStorage.getItem('TODO')) || [];
 let id;
 const updateTodo = (todoId, el) => {
   const todo = LIST.find((todo) => todo.id === parseInt(todoId, 10));
@@ -65,7 +73,6 @@ list.addEventListener('click', (e) => {
   localStorage.setItem('TODO', JSON.stringify(LIST));
 });
 
-
 // function to loadlist
 
 const data = JSON.parse(localStorage.getItem('TODO'));
@@ -81,6 +88,3 @@ clearChecked();
 document.querySelector('.fa-arrows-rotate').addEventListener('click', () => {
   window.location.reload();
 });
-
-
-
