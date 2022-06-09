@@ -69,3 +69,16 @@ export const completeTodo = (element) => {
     LIST[element.id - 1].completed = false;
   }
 };
+
+// update editing
+export const updateTodo = () => {
+  list.addEventListener('input', (e) => {
+    const val = e.target;
+    const todoId = val.closest('li').id;
+    const todo = LIST.find((todo) => todo.id === parseInt(todoId, 10));
+    if (val.hasAttribute('contenteditable')) {
+      todo.name = val.textContent;
+    }
+    localStorage.setItem('TODO', JSON.stringify(LIST));
+  });
+};

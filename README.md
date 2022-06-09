@@ -16,29 +16,44 @@ Click here for  [@Live Demo]( https://josphat205.github.io/Daily-to-list/)
  
 ## **Setup**   
 To use this project copy the code SSl link othe repository<br />
-## Install
-1. Install with [`git`](git@github.com:Josphat205/work-todo-list.git)
+## Run Jest Locally
 
-   - `$ git clone git@github.com:Josphat205/awesome-books.git`
+Install dependencies
+
+```bash
+  npm install --save-dev jest
+```
+
+Add this file to package.json
+
+```package.json
+ {
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
+Run  
+
+```bash
+  npm run test
+```
 ## **Usage**
 You can use the project for learning, know how codes are arranged in Html , javascript and Css
-## **Run tests**
-To check errors on your codes run linters commands<br />
+
 ## **Deployment**
 1. Go to setting on your github repo
 2. go to pages
 3. Deploy pages
 4. change the branch to main and save
-## **Authors**
-👤 Author1
+## Authors
 
-GitHub: @josphat205<br />
+- [@Josphat Kiploman](https://github.com/Josphat205)
 
+## Authors
 
-Twitter: @twitter3745635<br />
+- [@Safar Ali](https://github.com/safar1212)
 
-
-LinkedIn: Josphat Kiploman<br />
 
 ## **🤝 Contributing**
 1. Clone repo and create a new branch: `$ git clone git@github.com:Josphat205/work-todo-list.git.`
