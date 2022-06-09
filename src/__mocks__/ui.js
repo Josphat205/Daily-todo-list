@@ -35,6 +35,3 @@ export const updateTodo = (arr, id, el) => {
   }
   return array;
 };
-
-
-
