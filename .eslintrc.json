@@ -3,7 +3,8 @@
     "browser": true,
     "es6": true,
     "jest": true,
-    "jquery": true
+    "jquery": true,
+    "singleQuote": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
