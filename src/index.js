@@ -6,16 +6,12 @@ import {
   list,
   loadList,
   removeTodo,
+  updateTodo,
 } from './ui.js';
 // variables
 let LIST = JSON.parse(localStorage.getItem('TODO')) || [];
 let id;
-const updateTodo = (todoId, el) => {
-  const todo = LIST.find((todo) => todo.id === parseInt(todoId, 10));
-  if (el.hasAttribute('contenteditable')) {
-    todo.name = el.textContent;
-  }
-};
+
 // add to list
 document.addEventListener('keyup', (e) => {
   // LIST.sort((a, b) => b.id - a.id);
@@ -47,12 +43,7 @@ document.addEventListener('keyup', (e) => {
   }
 });
 
-list.addEventListener('input', (e) => {
-  const val = e.target;
-  const tagId = e.target.closest('li').id;
-  updateTodo(tagId, val);
-  localStorage.setItem('TODO', JSON.stringify(LIST));
-});
+updateTodo();
 
 list.addEventListener('click', (e) => {
   const element = e.target;
